@@ -27,8 +27,9 @@ public class DBUtil {
 			dataSource.setUsername(properties.getProperty(DB_USERNAME));
 			dataSource.setPassword(properties.getProperty(DB_PASSWORD));
 
-			dataSource.setMinIdle(100);
-			dataSource.setMaxIdle(1000);
+			dataSource.setInitialSize(10);
+			
+			System.out.println(dataSource.getInitialSize());
 
 		} catch (IOException e) {
 			e.printStackTrace();
