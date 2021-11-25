@@ -31,6 +31,21 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/local/ZOHOCORP/nishan-pt4241/Downloads/HikariDataSourceConnectionPoolDemo-master/HikariDataSourceConnectionPoolDemo/Lib/slf4j-api-1.7.25.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/local/ZOHOCORP/nishan-pt4241/Downloads/HikariDataSourceConnectionPoolDemo-master/HikariDataSourceConnectionPoolDemo/Lib/mysql-connector-java-5.1.18.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/local/ZOHOCORP/nishan-pt4241/Downloads/HikariDataSourceConnectionPoolDemo-master/HikariDataSourceConnectionPoolDemo/Lib/HikariCP-2.4.7.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="/home/local/ZOHOCORP/nishan-pt4241/Documents/java mysql connector/mysql-connector-java-8.0.16.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

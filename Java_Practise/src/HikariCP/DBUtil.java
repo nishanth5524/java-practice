@@ -1,12 +1,13 @@
-package DBCP;
+package HikariCP;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.dbcp2.BasicDataSource;
+import com.zaxxer.hikari.HikariDataSource;
 
 public class DBUtil {
 	private static final String DB_USERNAME = "db.username";
@@ -15,23 +16,24 @@ public class DBUtil {
 	private static final String DB_DRIVER_CLASS = "driver.class.name";
 
 	private static Properties properties = null;
-	private static BasicDataSource dataSource;
+	private static HikariDataSource dataSource;
 	static {
 		try {
 			properties = new Properties();
 			properties.load(new FileInputStream("dataConfig.properties"));
 
-			dataSource = new BasicDataSource();
+			dataSource = new HikariDataSource();
 			dataSource.setDriverClassName(properties.getProperty(DB_DRIVER_CLASS));
-			dataSource.setUrl(properties.getProperty(DB_URL));
+
+			dataSource.setJdbcUrl(properties.getProperty(DB_URL));
 			dataSource.setUsername(properties.getProperty(DB_USERNAME));
 			dataSource.setPassword(properties.getProperty(DB_PASSWORD));
 
-			dataSource.setInitialSize(10);
-			dataSource.setDefaultTransactionIsolation(1);		
-			System.out.println(dataSource.getInitialSize());
+			dataSource.setMaximumPoolSize(10);
+			dataSource.setAutoCommit(false);
+			dataSource.setLoginTimeout(3);
 
-		} catch (IOException e) {
+		} catch (IOException | SQLException e) {
 			e.printStackTrace();
 		}
 	}

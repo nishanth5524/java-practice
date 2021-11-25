@@ -26,6 +26,9 @@ public class ClientTest extends Thread {
 
 							System.out.println(empId + "\t" + eName + "\t" + emessage);
 						}
+						
+						connection.close();
+						
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
