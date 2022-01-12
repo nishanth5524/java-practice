@@ -14,7 +14,8 @@ class Child2 extends Thread {
 	public void run() {
 		ThreadLocal<String> obj2 = new ThreadLocal<String>();
 		obj2.set("Demo");
-		obj2.remove();
+		
+	//	obj2.remove();
 		
 		System.out.println(obj2.get());
 

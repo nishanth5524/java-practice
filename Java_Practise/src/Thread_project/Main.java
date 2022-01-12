@@ -9,15 +9,16 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		ExecutorService es = Executors.newFixedThreadPool(6);
+		ExecutorService es = Executors.newFixedThreadPool(12);
 		int Loan_fee = 50;
 
 		Queue<Loan> q = new LinkedList<>();
 
-		for (int i = 1; i <= 100; i++) {
+		for (int i = 1; i <= 50; i++) {
 
 			Runnable obj = new Loan(i, i);
 			q.add((Loan) obj);
+			Thread.sleep(1);
 			System.out.println(Thread.activeCount());
 			es.execute(obj);
 

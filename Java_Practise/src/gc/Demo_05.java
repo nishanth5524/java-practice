@@ -8,16 +8,17 @@ public class Demo_05 {
 
 	public static void main(String args[]) throws InterruptedException {
 
-		ArrayList<byte[]> list = new ArrayList<>(5000);
+		ArrayList<byte[]> list = new ArrayList<>();
 
-		for (int i = 0; i < 5000; i++) {
+		for (int i = 0; i < 5; i++) {
 
-			list.add(new byte[ONE_MB]);
+			list.add(new byte[50*ONE_MB]);
 
-		//	System.out.println("Allocated arrays: " + i);
+			System.out.println(list.get(i));
 			
-			Thread.sleep(100);
-
+			Thread.sleep(1);
+            
+			 
 		}
 
 	}
