@@ -9,7 +9,7 @@ package OOPS;
  *
  * @author admin
  */
-public class ScientificCalculator extends Calculator {
+public class ScientificCalculator extends Calculators {
     
     public ScientificCalculator(int error) {
         super(error);

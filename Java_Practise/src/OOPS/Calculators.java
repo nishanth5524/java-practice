@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author admin
  */
-public class Calculator {
+public class Calculators {
     
     /*
     
@@ -46,7 +46,7 @@ public class Calculator {
         defaultError = initializeError();
         System.out.println("Class created with error value "+defaultError);
     }
-    public Calculator(int error) {
+    public Calculators(int error) {
         if(error < 0){
             errorValue = defaultError;
                     
@@ -59,10 +59,10 @@ public class Calculator {
     
     
     public static void main(String[] args) {
-        Calculator m1Calc = new Calculator(1);
+        Calculators m1Calc = new Calculators(1);
         m1Calc.addition(10, 15);
         
-        Calculator m2Calc = new Calculator(5);
+        Calculators m2Calc = new Calculators(5);
         m2Calc.addition(10, 15);
     }
     public   void  addition(int a , int b){

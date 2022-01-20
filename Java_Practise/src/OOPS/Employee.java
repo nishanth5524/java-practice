@@ -18,7 +18,7 @@ public class Employee  {
     
     */
     AgeProof ageProof;
-    Calculator myCalc;
+    Calculators myCalc;
     public Employee(AgeProof proof) {
        ageProof = proof;
     }
